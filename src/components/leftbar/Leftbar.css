@@ -1,12 +1,66 @@
-.leftbar{
-    flex: 2;
-    position: sticky;
-    top: 70px;
-    height: calc(100px-70px);
-    border-right: 1px gray solid;
-    width: fit-content;
-    overflow: scroll;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+.leftbar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100px-70px);
+  border-right: 1px gray solid;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.leftbar webkit-scrollbar {
+    display: none;
+  }
+.leftbar h3{
+    color: white;
+}
+.leftbar_upper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.upper_tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.upper_tab img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.upper_tab span {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+.lower_tab {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  align-items: center;
+}
+.lower_tab img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.lower_tab span {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+.pages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
