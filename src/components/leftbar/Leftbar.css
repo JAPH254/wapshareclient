@@ -1,0 +1,12 @@
+.leftbar{
+    flex: 2;
+    position: sticky;
+    top: 70px;
+    height: calc(100px-70px);
+    border-right: 1px gray solid;
+    width: fit-content;
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}

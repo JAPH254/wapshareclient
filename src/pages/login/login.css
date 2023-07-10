@@ -1,0 +1,98 @@
+.log_container {
+  height: 100vh;
+  background-color: rgb(175, 172, 232);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.login {
+  display: flex;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.log_left {
+  width: 50%;
+  background: url("https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600")
+    center;
+  background-size: cover;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.log_left h1 {
+  font-size: 48px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200;
+}
+.log_left span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 30px;
+}
+.log_left b {
+  font-size: 36;
+  font-style: italic;
+}
+.log_left button {
+  background-color: rgba(213, 235, 223, 0.353);
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: blueviolet;
+}
+.log_left button:hover {
+  background-color: rgb(193, 190, 255);
+  color: white;
+}
+
+.log_right {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  background-color: white;
+}
+
+.log_right h1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+.log_right form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.log_right form input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 20px 10px;
+  outline: none;
+}
+.log_right form button {
+  width: 50%;
+  padding: 10px;
+  background: rgba(125, 22, 188, 0.709);
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+.log_right form button:hover {
+  background-color: rgb(193, 190, 255);
+  color: white;
+}
