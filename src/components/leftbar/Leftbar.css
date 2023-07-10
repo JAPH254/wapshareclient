@@ -1,20 +1,27 @@
 .leftbar {
-  flex: 2;
+  width: 15%;
   position: sticky;
   top: 70px;
-  height: calc(100px-70px);
+  height: calc(100vh - 10px);
   border-right: 1px gray solid;
   overflow: scroll;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  overflow-y: scroll;
+  border-right: 2px solid #795a74;
+  padding-bottom: 80px;
 }
-.leftbar webkit-scrollbar {
-    display: none;
-  }
-.leftbar h3{
-    color: white;
+.leftbar::-webkit-scrollbar {
+  display: none;
+}
+.leftbar::-webkit-scrollbar-thumb {
+  background-color: #d30db2;
+  border-radius: 100px;
+}
+.leftbar h3 {
+  color: white;
 }
 .leftbar_upper {
   display: flex;
@@ -57,10 +64,10 @@
   font-weight: 500;
   color: white;
 }
-.pages{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+.pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }

@@ -1,0 +1,10 @@
+.home{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #a36443;
+    overflow-y: scroll;
+}

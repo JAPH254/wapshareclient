@@ -68,6 +68,8 @@ const Leftbar = () => {
           <span>Alice Cheese</span>
         </div>
       </div>
+      <hr />
+      <h3>Pages</h3>
       <div className="suggestedPages">
         <div className="pages">
         <LanguageRoundedIcon/>
