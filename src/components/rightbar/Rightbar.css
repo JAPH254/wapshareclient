@@ -1,10 +1,43 @@
 .rightbar {
   width: 20%;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 10px);
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  border-left: 2px solid #795A74;
+  overflow-y: scroll;
+  padding-bottom: 80px;
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.50);
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.50);
+  padding: 20px;
+  border-radius: 10px;
+  width: 35vh;
+  height: 50vh;
+
+}
+.aligned{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.rightbar::-webkit-scrollbar {
+
+  display: none;
 }
 .userinfo {
   display: flex;
@@ -23,4 +56,21 @@
   width: 50px;
   object-fit: cover;
   border-radius: 50%;
+}
+.dropdownlist{
+  height: 50vh;
+}
+.onclick{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 15vh;
+  width: 35vh;
+  padding top: 25px;
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.50);
+}
+.onclick img{
+  max-height: 50%;
 }

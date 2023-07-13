@@ -7,7 +7,8 @@ import Home from "./pages/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Rightbar from "./components/rightbar/Rightbar";
 import Leftbar from "./components/leftbar/Leftbar";
-import Profile from "./components/rightbar/profile/profile"
+import Footer from "./pages/footer/Footer";
+import Profile from "./components/profile/profile";
 
 function App() {
   const Dashboard = () => {
@@ -17,6 +18,7 @@ function App() {
         <div className="body">
           <Leftbar />
           <Outlet />
+
           <Rightbar />
         </div>
       </div>
@@ -34,6 +36,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

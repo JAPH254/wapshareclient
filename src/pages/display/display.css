@@ -1,0 +1,31 @@
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.50);
+    height: 50vh;
+    /* padding: 20px; */
+    color: white;
+    width: 35vh;
+}
+/* setting hover effect */
+.settings:hover{
+    cursor: pointer;
+    color: rgb(48, 4, 70);
+    font-size: larger;
+    font-weight: bold;
+}
+.logout :hover{
+    cursor: pointer;
+    color: rgb(48, 4, 70);
+    font-size: larger;
+    font-weight: bold;
+}
+.myprofile :hover{
+    cursor: pointer;
+    color: rgb(48, 4, 70);
+    font-size: larger;
+    font-weight: bold;
+}

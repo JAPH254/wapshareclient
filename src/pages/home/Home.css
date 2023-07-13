@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #a36443;
     overflow-y: scroll;
+}
+.home::-webkit-scrollbar{
+    display: none;
 }

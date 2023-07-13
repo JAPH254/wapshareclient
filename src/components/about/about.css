@@ -1,0 +1,42 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgb(25, 145, 145);
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.5);
+    width: 35vh;
+}
+.media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.know{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.platforms{
+    display: flex;
+    gap: 10px;
+}
+.media h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.know h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.know span{
+    font-size: 25px;
+    text-align: center;
+}
