@@ -7,8 +7,7 @@
     height: 100vh;
     overflow-y: scroll;
     font-family: inherit;
-    overflow: scroll;
-    position: sticky;
+    padding-top: 243px;
 }
 .home::-webkit-scrollbar{
     display: none;

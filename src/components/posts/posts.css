@@ -1,7 +1,67 @@
 .Posts{
-    height: 25vh;
+    height: fit-content;
     width: 95%;
     box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
 
 
+}
+.postheaders{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(77, 210, 228, 0.281);
+}
+.postheaders img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.postheaders span{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(32, 12, 12);
+    cursor: pointer;
+    font-family: inherit;
+}
+.postheaders p{
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+.postcontent{
+    padding: 10px;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.postcontent img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+.postcontent p{
+    font-size: 20px;
+    font-weight: 600;
+    color:black;
+    cursor: pointer;
+    font-family: inherit;
+}
+.postfooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid rgba(77, 210, 228, 0.281);
+    justify-content: space-around;
 }

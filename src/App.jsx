@@ -1,5 +1,5 @@
 import * as React from "react";
-import './App.css'
+import "./App.css";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Login from "./pages/login/login";
 import Register from "./pages/register/Register";
@@ -13,12 +13,11 @@ import Profile from "./components/profile/profile";
 function App() {
   const Dashboard = () => {
     return (
-      <div >
+      <div>
         <Navbar />
         <div className="body">
           <Leftbar />
           <Outlet />
-
           <Rightbar />
         </div>
       </div>
@@ -28,7 +27,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard />} >
+          <Route path="/" element={<Dashboard />}>
             <Route path="/" element={<Home />} />
             <Route path="/profile/:id" element={<Profile />} />
           </Route>
@@ -36,7 +35,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

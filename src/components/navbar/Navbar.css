@@ -75,3 +75,21 @@
   font-size: 15px;
   padding: 5px 10px;
 }
+.mail button{
+  border: 5px solid rgba(14, 88, 97, 0.281);
+  border-radius: 10px;
+  background-color: rgb(107, 234, 68);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.notif button{
+  border: 5px solid rgba(14, 88, 97, 0.281);
+  border-radius: 10px;
+  background-color: rgb(107, 234, 68);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px 10px;
+}

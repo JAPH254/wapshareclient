@@ -7,11 +7,13 @@
     box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.9);
     align-items: center;
     padding: 20px;
+    
 
 
 }
 .story1{
 flex: 1;
+position: relative;
 }
 .story1 img{
     height: 300px;
@@ -20,9 +22,30 @@ flex: 1;
     object-fit: cover;
     cursor: pointer;
     border: 10px solid rgba(77, 210, 228, 0.281);
+    
+}
+.poster{
+position: absolute;
+top: 80%;
+left: 30%;
+
+}
+.poster span{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(32, 12, 12);
+    cursor: pointer;
+    font-family: inherit;
+}
+.poster p{
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
 }
 .story2{
 flex: 1;
+position: relative;
 }
 .story2 img{
     height: 300px;
@@ -34,6 +57,7 @@ flex: 1;
 }
 .story3{
 flex: 1;
+position: relative;
 }
 .story3 img{
     height: 300px;
@@ -45,6 +69,7 @@ flex: 1;
 }
 .story4{
 flex: 1;
+position: relative;
 }
 .story4 img{
     height: 300px;

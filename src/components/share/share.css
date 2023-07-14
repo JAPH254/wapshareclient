@@ -1,0 +1,16 @@
+.share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 5px;
+    cursor: pointer;
+}
+.p Link{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+
+}

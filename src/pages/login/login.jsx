@@ -1,6 +1,24 @@
+// import { useDispatch } from "react-redux";
+// import { loginUser } from "../../store/reducerAPI";
 import "./login.css"; // Path: client\src\pages\login\login.css
-import {Link} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 function Login() {
+  const navigate = useNavigate()
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+  // const dispatch = useDispatch();
+  const onSubmit = async(data) => {
+    try {
+      // await loginUser(data, dispatch);
+      navigate("/")
+    } catch (error) {
+      alert(error.message);
+    }
+  };
   return (
     <div className="log_container">
       <div className="login">
@@ -16,9 +34,17 @@ function Login() {
         </div>
         <div className="log_right">
           <h1>login</h1>
-          <form>
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+              {...register("USERNAME")}
+              type="text"
+              placeholder="Username"
+            />
+            <input
+              {...register("USER_PASSWORD")}
+              type="password"
+              placeholder="Password"
+            />
             <button>Login</button>
           </form>
         </div>

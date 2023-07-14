@@ -1,0 +1,39 @@
+.comments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 25px;
+    width: 30px;
+    align-items: center;
+    cursor: pointer;
+
+}
+.commentsfoot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.commentsfoot span{
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    font-family: inherit;
+}
+.commentsfoot input{
+    border: none;
+    background-color: rgb(77, 210, 228);
+    color: rgb(18, 1, 1);
+    padding: 5px;
+    border-radius: 5px;
+    font-family: inherit;
+    
+}
+.comm{
+    display: flex;
+    gap: 10px;
+}

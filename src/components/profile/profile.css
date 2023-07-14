@@ -3,7 +3,13 @@
   width: 65%;
   flex-direction: column;
   display: flex;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 243px 0 0;
   justify-content: center;
+}
+.profile::-webkit-scrollbar {
+  display: none;
 }
 .images {
   width: 100%;
