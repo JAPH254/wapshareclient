@@ -1,4 +1,4 @@
-import './home.css'
+import './Home.css'
 import Stories from '../../components/stories/stories';
 import Posts from '../../components/posts/posts';
 function Home() {
