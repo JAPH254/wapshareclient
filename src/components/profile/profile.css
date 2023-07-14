@@ -33,6 +33,11 @@
 
 .profileContainer {
   padding: 70px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  
 }
 
 .uInfo {
@@ -47,6 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
 }
 
 .left {

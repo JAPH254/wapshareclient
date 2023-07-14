@@ -21,6 +21,7 @@
 }
 .leftbar h3 {
   color: white;
+  font-family: inherit;
 }
 .leftbar_upper {
   display: flex;
@@ -31,12 +32,14 @@
   box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.5);
   padding: 10px;
   cursor: pointer;
+  font-family: inherit;
 }
 .upper_tab {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  font-family: inherit;
 }
 .upper_tab img {
   height: 30px;
@@ -49,6 +52,7 @@
   font-size: 15px;
   font-weight: 500;
   color: white;
+  font-family: inherit;
 }
 .lower_tab {
   display: flex;

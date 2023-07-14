@@ -5,15 +5,19 @@ import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="navbar">
       <div className="nav_left">
         <div className="lefticons">
-        <b>W</b>
-        <HomeOutlinedIcon />
-        <GridViewOutlinedIcon />
+          <Link to="/">
+            <b>W</b>
+          </Link>
+
+          <HomeOutlinedIcon />
+          <GridViewOutlinedIcon />
         </div>
         <div className="search">
           <SearchIcon />
@@ -25,7 +29,10 @@ function Navbar() {
         <NotificationsIcon />
         <MailOutlineIcon />
         <div className="pic">
-            <img src="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+          <img
+            src="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+          />
         </div>
       </div>
     </div>

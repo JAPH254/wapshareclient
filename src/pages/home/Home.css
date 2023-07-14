@@ -6,6 +6,9 @@
     justify-content: center;
     height: 100vh;
     overflow-y: scroll;
+    font-family: inherit;
+    overflow: scroll;
+    position: sticky;
 }
 .home::-webkit-scrollbar{
     display: none;
