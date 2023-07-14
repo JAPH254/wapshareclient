@@ -1,6 +1,6 @@
 import "./Footer.css";
 import React from "react";
-
+//here we are importing footer from footer.css
 function Footer() {
   return (
     <div className="footer">
