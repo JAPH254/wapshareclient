@@ -1,9 +1,12 @@
 import React from "react";
 import "./userinfo.css";
-function Userinfo(props) {
-  return (
+import { useSelector } from "react-redux";
+function Userinfo() {
+  const user = useSelector((store) => store.user.user);
+  console.log(user);
+    return (
     <div className="U_info">
-      <h3>Username</h3>
+      <h3>{user.USERNAME}</h3>
       <span>user email</span>
       <span>user phone</span>
       <span>user location</span>

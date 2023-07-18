@@ -3,10 +3,10 @@ import "./messanging.css";
 import { useNavigate } from "react-router-dom";
 
 function Messanging(props) {
-    const navigate = useNavigate();
-    const handleback = () => {
-        navigate("/");
-    };
+  const navigate = useNavigate();
+  const handleback = () => {
+    navigate("/");
+  };
   return (
     <div className="messanging">
       <div className="heading">
@@ -18,7 +18,7 @@ function Messanging(props) {
       </div>
       <div className="foot">
         <button onClick={handleback}>Back</button>
-        <button>Send</button>
+        <button >Send</button>
       </div>
     </div>
   );

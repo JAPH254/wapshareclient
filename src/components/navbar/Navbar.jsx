@@ -17,7 +17,7 @@ function Navbar() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [messanging, setMessanging] = useState(false);
   const navigate = useNavigate();
-  // const user = useSelector((store)=> store.user)
+  const user = useSelector((store)=> store.user.user)
   // console.log(user);
   //handle the home button
   const handlehome = () => {
@@ -79,10 +79,10 @@ function Navbar() {
 
         <div className="pic">
           <img
-            src="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src="https://images.pexels.com/photos/3846038/pexels-photo-3846038.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt=""
           />
-          {/* <h1>{user?.USERNAME}</h1> */}
+          <h4>{user.USERNAME}</h4>
         </div>
       </div>
     </div>

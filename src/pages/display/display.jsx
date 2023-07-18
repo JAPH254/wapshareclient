@@ -4,6 +4,7 @@ import Myprofile from "../../components/rightbar/profile/myprofile";
 import Settings from "../../components/Settings/settings";
 import Logout from "../logout/logout";
 
+
 function Display(props) {
   return (
     <div>

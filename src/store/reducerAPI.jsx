@@ -1,12 +1,25 @@
+import { loginSuccess, registerSuccess } from "./userSlice";
 import axios from "axios";
-import { login } from "./userSlice";
+import { ApiDomain } from "../assets/utils";
+
 export const loginUser = async (state, dispatch) => {
-    try{
-       const res = await axios.post("http://localhost:8082/auth/login", state);
-  const user = await res.data;
-  dispatch(login(user)); 
-  console.log(user);
-    }catch(error){
-        alert(error.message)
-    }
+  try {
+    const res = await axios.post(`${ApiDomain}/auth/login`, state);
+    const data = await res.data;
+    dispatch(loginSuccess(data));
+    localStorage.setItem("user", JSON.stringify(data));
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+export const registerUser = async (state, dispatch) => {
+  try {
+    const res = await axios.post(`${ApiDomain}/auth/register`,state);
+    const data = await res.data;
+    dispatch(registerSuccess(data));
+    alert(data.message);
+  } catch (error) {
+    alert(error.message);
+  }
 };
