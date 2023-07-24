@@ -5,7 +5,9 @@ import Display from "../../pages/display/display";
 import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
 import Userinfo from "../userinfo/userinfo";
 import About from "../about/about";
+import { useSelector } from "react-redux";
 function Rightbar() {
+  const user = useSelector((store) => store.user.user);
   const [display, setDisplay] = useState(false);
   return (
     <div className="rightbar">
@@ -13,8 +15,8 @@ function Rightbar() {
         <div className="aligned">
           <div onClick={() => setDisplay(!display)} className="onclick">
             <img
-              src="https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt=""
+              src={user.PROFILE_PIC}
+              alt="profile"
             />
 
             <>

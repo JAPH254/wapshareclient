@@ -4,11 +4,24 @@ import Comments from "../comments/comments";
 import Likes from "../likes/likes";
 import Share from "../share/share";
 import { useNavigate } from "react-router-dom";
-function Posts(props) {
-    const navigate = useNavigate();
-    const handlePost = () => {
-        navigate("/profile/:id");
-    };
+import { useDispatch } from "react-redux";
+import { fetchPosts } from "../../store/reducerAPI";
+import { useEffect } from "react";
+function Posts() {
+  const navigate = useNavigate();
+  const handlePost = () => {
+    navigate("/profile/:id");
+  };
+  //fetch posts froom the database using redux
+  const dispatch = useDispatch();
+  const postlist = () => {
+    const res = fetchPosts;
+  };
+  useEffect(() => {
+    postlist();
+  }, []);
+  console.log();
+
   return (
     <>
       <div className="Posts">
@@ -23,16 +36,14 @@ function Posts(props) {
           </div>
         </div>
         <div className="postcontent">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            sunt quam architecto molestias. Fugiat aliquam enim id, laboriosam
-            aspernatur molestias? Molestiae officia tenetur nobis pariatur
-            laboriosam nulla modi nam inventore.
-          </p>
-          <img
-            src="https://images.pexels.com/photos/1125850/pexels-photo-1125850.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
+          {/* map the fetched posts here */}
+          {/* <ul>
+            {posts.map((post) => (
+              <li key={post._id}>
+                <p>{post.CONTENT}</p>
+              </li>
+            ))}
+          </ul> */}
         </div>
         <div className="postfooter">
           <div className="like">

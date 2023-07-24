@@ -9,6 +9,7 @@
   z-index: 10;
   background-color: rgb(61, 120, 161);
   box-shadow: 0px 2px 4px #ccc;
+
 }
 .nav_left {
   display: flex;

@@ -1,25 +1,47 @@
-import React from "react";
 import "./messanging.css";
-import { useNavigate } from "react-router-dom";
+import io from "socket.io-client";
+import { useState } from "react";
+import Chatbox from "../chatbox/chatbox";
+import { useSelector } from "react-redux";
 
-function Messanging(props) {
-  const navigate = useNavigate();
-  const handleback = () => {
-    navigate("/");
+const socket = io.connect("http://localhost:8082");
+
+function Messanging() {
+  const user = useSelector((store) => store.user.user);
+  const [username, setUsername] = useState(user.USERNAME);
+  const [room, setRoom] = useState("");
+  const [showChat, setShowChat] = useState(false); // showChat is a boolean
+
+  const joinRoom = () => {
+    if (username !== "" && room !== "") {
+      socket.emit("join_room", room);
+      setShowChat(true); // show the chat window
+    }
   };
+
   return (
-    <div className="messanging">
-      <div className="heading">
-        <h3>chatting with @Username</h3>
-        <span>time</span>
-      </div>
-      <div className="texting">
-        <input type="text-area" placeholder="write a message" />
-      </div>
-      <div className="foot">
-        <button onClick={handleback}>Back</button>
-        <button >Send</button>
-      </div>
+    <div className="messApp">
+      {!showChat ? ( // if showChat is false, show the joinChatContainer
+        <div className="joinChatContainer">
+          <h3>Wapshare chat Setup</h3>
+          <div className="inputs">
+            <label>Joining as {user.USERNAME}</label>
+            <input
+              type="text"
+              placeholder="Connection ID..."
+              onChange={(event) => {
+                setRoom(event.target.value);
+              }}
+            />
+          </div>
+          <div>
+            <button onClick={joinRoom}>connect</button>
+          </div>
+        </div>
+      ) : (
+        //
+        <Chatbox socket={socket} username={username} room={room} />
+      )}
     </div>
   );
 }

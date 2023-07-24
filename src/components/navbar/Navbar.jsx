@@ -79,7 +79,8 @@ function Navbar() {
 
         <div className="pic">
           <img
-            src="https://images.pexels.com/photos/3846038/pexels-photo-3846038.jpeg?auto=compress&cs=tinysrgb&w=600"
+            //fetch image from the database
+            src={user.PROFILE_PIC}
             alt=""
           />
           <h4>{user.USERNAME}</h4>

@@ -1,14 +1,17 @@
 import React from "react";
 import "./Leftbar.css";
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
+import { useSelector } from "react-redux";
+
 
 const Leftbar = () => {
+  const user = useSelector((store) => store.user.user);
   return (
     <div className="leftbar">
       <div className="leftbar_upper">
         <div className="upper_tab">
           <img
-            src="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src={user.PROFILE_PIC}
             alt=""
           />
           <span>Profile</span>
@@ -28,13 +31,7 @@ const Leftbar = () => {
           />
           <span>Groups</span>
         </div>
-        <div className="upper_tab">
-          <img
-            src="https://images.pexels.com/photos/442161/pexels-photo-442161.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-          <span>Marketplace</span>
-        </div>
+        
         <div className="upper_tab">
           <img
             src="https://images.pexels.com/photos/320617/pexels-photo-320617.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -47,7 +44,7 @@ const Leftbar = () => {
             src="https://images.pexels.com/photos/2874998/pexels-photo-2874998.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt=""
           />
-          <span>Memories</span>
+          <span>Chats</span>
         </div>
       </div>
       <hr />
