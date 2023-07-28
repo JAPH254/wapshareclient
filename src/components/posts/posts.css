@@ -65,3 +65,60 @@
     border-top: 1px solid rgba(77, 210, 228, 0.281);
     justify-content: space-around;
 }
+.post{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    background-color: rgba(42, 123, 160, 0.377);
+    padding: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+
+}
+.posthead{
+display: flex;
+flex-direction: row;
+gap: 1rem;
+}
+.posthead img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(86, 128, 233);
+    object-fit: cover;
+}
+.posthead h1{
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bold;
+}
+.postcenter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.postcenter p{
+    font-family: inherit;
+    color: rgb(19, 1, 33);
+    padding: 10px;
+}
+.postcenter img{
+    object-fit: cover;
+    border:5px solid rgba(77, 210, 228, 0.281);
+}
+.date{
+    padding-left: 65px;
+}
+.postfoot{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}

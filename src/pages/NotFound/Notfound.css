@@ -1,0 +1,20 @@
+.notfound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    background: #5fa0da;
+}
+.titl{
+    font-size: 10rem;
+    font-weight: 700;
+    color: #fff;
+}
+.detail{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+}

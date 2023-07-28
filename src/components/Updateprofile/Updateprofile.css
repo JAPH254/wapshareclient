@@ -1,0 +1,52 @@
+.Updates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 70%;
+  gap: 1rem;
+}
+.up{
+    background-color: #b19191;
+    color: #fff;
+    border: solid 1px #5aa2cf;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+.updatingdetail form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.updatingdetail form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.updatingdetail form input:focus {
+  border: 1px solid #000;
+}
+.updatingdetail form button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #cc8080;
+  color: #fff;
+  cursor: pointer;
+}
+.foot button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #7d1010;
+  color: #fff;
+  cursor: pointer;
+}

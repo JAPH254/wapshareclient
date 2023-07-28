@@ -1,0 +1,29 @@
+.gallery{
+    height: 100%;
+    width: 65%;
+}
+.gallarycontent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: max-content;
+    height: 100vh;
+    width: 100%;
+    box-shadow : 0px 0px 10px 0px rgba(0,0,0,0.75);
+    background-color: rgba(79, 38, 154, 0.085);
+}
+.gallarycontent__title{
+    color: violet;
+}
+.gallarycontent h1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.gallarycontent images{
+    height: 100%;
+    width: 95%;
+    background-color: rgb(209, 168, 230);
+}

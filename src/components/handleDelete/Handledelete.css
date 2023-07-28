@@ -1,0 +1,37 @@
+.Delete{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Delpage{
+    height: auto;
+    min-height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9ea5a622;
+
+}
+.Delpage h2{
+    font-size: 2rem;
+    font-weight: 600;
+   color: white;
+    margin-bottom: 1rem;
+}
+.Delpage button{
+    height: 3rem;
+    width: 10rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(176, 116, 128);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}

@@ -17,6 +17,9 @@ const userSlice = createSlice({
         },
         registerSuccess: (state,action)=>{
             state.user=action.payload;
+        },
+        removeUser: (state) => {
+            state.user = null;
         }
     }
 });

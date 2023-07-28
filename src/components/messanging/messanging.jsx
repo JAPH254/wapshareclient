@@ -9,7 +9,7 @@ const socket = io.connect("http://localhost:8082");
 function Messanging() {
   const user = useSelector((store) => store.user.user);
   const [username, setUsername] = useState(user.USERNAME);
-  const [room, setRoom] = useState("");
+  const [room, setRoom] = useState(123);
   const [showChat, setShowChat] = useState(false); // showChat is a boolean
 
   const joinRoom = () => {
@@ -18,6 +18,7 @@ function Messanging() {
       setShowChat(true); // show the chat window
     }
   };
+  const chatid=1234
 
   return (
     <div className="messApp">
@@ -26,13 +27,14 @@ function Messanging() {
           <h3>Wapshare chat Setup</h3>
           <div className="inputs">
             <label>Joining as {user.USERNAME}</label>
-            <input
+            {/* <input
               type="text"
               placeholder="Connection ID..."
               onChange={(event) => {
                 setRoom(event.target.value);
-              }}
-            />
+              }} 
+            /> */}
+            {/* <label value></label> */}
           </div>
           <div>
             <button onClick={joinRoom}>connect</button>

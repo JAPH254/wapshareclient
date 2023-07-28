@@ -15,7 +15,7 @@ function Rightbar() {
         <div className="aligned">
           <div onClick={() => setDisplay(!display)} className="onclick">
             <img
-              src={user.PROFILE_PIC}
+              src={user?.PROFILE_PIC || null}
               alt="profile"
             />
 

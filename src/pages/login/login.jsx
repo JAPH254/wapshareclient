@@ -15,7 +15,7 @@ function Login() {
   const onSubmit = async (data) => {
     try {
       await loginUser(data, dispatch);
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       alert(error.message);
       console.log(error.message);
@@ -31,7 +31,7 @@ function Login() {
           <span>WAP</span>
           <span>TECHNOLOGY</span>
           <p>You don't have an account?</p>
-          <Link to="/register">
+          <Link to="/">
             <button>Register</button>
           </Link>
         </div>

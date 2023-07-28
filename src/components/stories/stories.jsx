@@ -1,7 +1,27 @@
 import "./stories.css";
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector,useDispatch } from "react-redux";
+import { fetchStories } from "../../store/reducerAPI";
 
 function Stories(props) {
+  const user = useSelector((store) => store.user.user);
+  const stories = useSelector((store) => store.stories.stories);
+  const dispatch = useDispatch();
+  const getStories = async () => {
+    try {
+      await fetchStories(user, dispatch);
+    } catch (error) {
+      alert(error.message);
+    }
+    useEffect(() => {
+      getStories();
+      fetchStories(user, dispatch);
+      console.log(stories);
+    }
+    , [])
+
+  };
+
   return (
     <div className="stories">
       <div className="story1">

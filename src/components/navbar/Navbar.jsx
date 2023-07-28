@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Navbar.css";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import RefreshIcon from '@mui/icons-material/Refresh';
@@ -12,16 +12,19 @@ import { useState } from "react";
 import Modal from "react-modal";
 import Messanging from "../messanging/messanging";
 import { useSelector } from "react-redux";
+import axios from "axios";
+import { ApiDomain } from "../../assets/utils";
 function Navbar() {
   //description: this is the navbar component
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [messanging, setMessanging] = useState(false);
   const navigate = useNavigate();
+  const searchTerm = useRef("");
   const user = useSelector((store)=> store.user.user)
   // console.log(user);
   //handle the home button
   const handlehome = () => {
-    navigate("/");
+    navigate("/dashboard");
   };
   //handle the messanging button
   const openModal = () => {
@@ -42,6 +45,25 @@ function Navbar() {
   const refreshPage = () => {
     window.location.reload();
   };
+  const handleChange = (e) => {
+    searchTerm.current = e.target.value;
+    console.log(searchTerm.current);
+  }
+  useEffect(() => {
+    const searchPosts = async () => {
+      try {
+        const res = await axios.get(`${ApiDomain}/posts/search?CONTENT=${searchTerm.current}`);
+        console.log(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    searchPosts();
+  }, [searchTerm]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
 
   return (
     <div className="navbar">
@@ -55,11 +77,11 @@ function Navbar() {
             <RefreshIcon />
           </div>
         </div>
-        <div className="search">
+        <form className="search" onSubmit={handleSubmit}>
           <SearchIcon />
-          <input type="text" placeholder="search..." />
-          <button>Search</button>
-        </div>
+          <input type="search" ref={searchTerm} onChange={handleChange} placeholder="search..." />
+          <button type="submit">Search</button>
+        </form>
       </div>
       <div className="nav_right">
         <div className="notif">
@@ -80,10 +102,10 @@ function Navbar() {
         <div className="pic">
           <img
             //fetch image from the database
-            src={user.PROFILE_PIC}
+            src={user?.PROFILE_PIC}
             alt=""
           />
-          <h4>{user.USERNAME}</h4>
+          <h4>{user?.USERNAME}</h4>
         </div>
       </div>
     </div>
